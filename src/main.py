@@ -3,10 +3,10 @@ import sys
 import unittest
 from pathlib import Path
 import pandas as pd
-from src.data_import import import_csv_files
-from src.data_processing import consolidate_data
-from src.data_query import query_data
-from src.report_generation import generate_report
+from data_import import import_csv_files
+from data_processing import consolidate_data
+from data_query import query_data
+from report_generation import generate_report
 
 
 def import_files(files):
@@ -74,7 +74,6 @@ def mode_shell():
                 print("Faites des recherches sur les données consolidées de cette manière (avec un # entre chaque requête : unit_price < 9.99 # category == 'Sports'")
                 str_query = input("Chemin des fichiers : ")
                 liste_query = str_query.split(' # ')
-                print(liste_query)
 
                 print("Si vous voulez trier les données sur une colonne en particulier, entrez le nom de la catégorie ou laissez vide si non")
                 str_colonne = input("Nom de la colonne : ")
@@ -87,6 +86,8 @@ def mode_shell():
                     print("(2) Décroissante")
                     choix_asc_ou_desc = input("Faites votre choix (1..2) : ")
                     match choix_asc_ou_desc:
+                        case "1":
+                            pass
                         case "2":
                             asc_ou_desc = "desc"
                         case _:
