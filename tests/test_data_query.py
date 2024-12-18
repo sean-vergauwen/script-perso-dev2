@@ -19,14 +19,13 @@ class TestDataQuery(unittest.TestCase):
             os.remove(self.test_file)
 
     def test_query_data_success(self):
-        result = query_data(self.test_file, 'quantity > 1')
-        self.assertEqual(len(result), 2)
+        result = query_data(self.test_file, ['quantity > 1'])
         self.assertTrue(all(result['quantity'] > 1))
 
     def test_query_data_no_matches(self):
-        result = query_data(self.test_file, 'quantity > 10')
-        self.assertEqual(result, None)
+        result = query_data(self.test_file, ['quantity > 10'])
+        self.assertTrue(result.empty)
 
     def test_query_data_file_not_found(self):
-        result = query_data('nonexistent.csv', 'quantity > 1')
+        result = query_data('nonexistent.csv', ['quantity > 1'])
         self.assertIsNone(result)
