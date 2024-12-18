@@ -1,10 +1,12 @@
 import pandas as pd
 
+
 def import_csv_files(file_paths):
     """
     Importe plusieurs fichiers CSV et retourne une liste de DataFrames.
 
-    Prend en entrée une liste de chemins de fichier CSV et retourne une liste de DataFrames.
+    Prend en entrée une liste de chemins de fichier CSV et
+    retourne une liste de DataFrames.
     """
     data_frames = []
     for path in file_paths:

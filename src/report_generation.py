@@ -1,8 +1,9 @@
 import pandas as pd
 
+
 def generate_report(file_path):
     """
-    Génére un rapport récapitulatif à partir des données consolidées.
+    Génère un rapport récapitulatif à partir des données consolidées.
     """
     try:
         df = pd.read_csv(file_path)

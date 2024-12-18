@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from src.report_generation import generate_report
 
+
 class TestReportGeneration(unittest.TestCase):
     def setUp(self):
         # Create a temporary test file

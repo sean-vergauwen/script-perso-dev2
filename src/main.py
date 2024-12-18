@@ -1,5 +1,4 @@
 import argparse, sys, unittest
-from logging import exception
 from pathlib import Path
 import pandas as pd
 from src.data_import import import_csv_files
@@ -7,12 +6,14 @@ from src.data_processing import consolidate_data
 from src.data_query import query_data
 from src.report_generation import generate_report
 
+
 def import_files(files):
     data = import_csv_files(files)
     if data:
         consolidate_data(data)
     else:
         print("Aucune donnée importée.")
+
 
 def query(user_query, sort_by, order):
     result = query_data('../outputs/consolidated_inventory.csv', user_query)
@@ -27,6 +28,7 @@ def query(user_query, sort_by, order):
         print(f"Erreur : {e})")
 
     print(result)
+
 
 def run_tests():
     # Get the project root directory
@@ -44,6 +46,7 @@ def run_tests():
     result = runner.run(suite)
 
     return result.wasSuccessful()
+
 
 def mode_shell():
     while True:
@@ -63,7 +66,7 @@ def mode_shell():
                 print("Importez des fichiers CSV en écrivant le chemin vers ceux-ci de cette manière (avec un espace entre chaque chemin de fichier) : ../data/sports.csv ../data/tools.csv ...")
                 str_chemins_fichiers = input("Chemin des fichiers : ")
 
-                liste_chemins_fichiers  = str_chemins_fichiers.split()
+                liste_chemins_fichiers = str_chemins_fichiers.split()
                 import_files(liste_chemins_fichiers)
             case "2":
                 print("Faites des recherches sur les données consolidées de cette manière (avec un # entre chaque requête : unit_price < 9.99 # category == 'Sports'")
@@ -102,12 +105,16 @@ def mode_shell():
             case _:
                 print("Mauvais choix ! Veuillez écrire un chiffre entre 1 et 5 inclus.")
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Système de gestion d'inventaire.")
-    parser.add_argument('--shell', action='store_true', help="Tourne le programme en mode shell")
-    parser.add_argument('--import-files', nargs='+', help="Importer des fichiers CSV.")
-    parser.add_argument('--query',help=
-    """
+    parser = argparse.ArgumentParser(
+        description="Système de gestion d'inventaire.")
+    parser.add_argument('--shell', action='store_true',
+                        help="Tourne le programme en mode shell")
+    parser.add_argument('--import-files', nargs='+',
+                        help="Importer des fichiers CSV.")
+    parser.add_argument('--query',
+                        help="""
     Interroge les données consolidées en fonction d'une ou plusieurs condition(s).
 
     Exemples d'utilisation :
@@ -116,11 +123,16 @@ def main():
         py main.py --query "quantity <= 5" |
         py main.py --query "unit_price < 9.99" "category == 'Sports'" --sort-by quantity --order desc
     """, nargs='*')
-    parser.add_argument('--generate-report', action='store_true', help="Générer un rapport.")
-    parser.add_argument('--show-data', action='store_true', help="Affiche les données consolidées")
+    parser.add_argument('--generate-report', action='store_true',
+                        help="Générer un rapport.")
+    parser.add_argument('--show-data', action='store_true',
+                        help="Affiche les données consolidées")
     parser.add_argument('--tests', action='store_true', help='Run les tests')
-    parser.add_argument("--sort-by", type=str, help="Colomne par laquelle les résultats sont triés")
-    parser.add_argument("--order", type=str, choices=["asc", "desc"], default="asc", help="Ordre du tri: 'asc' (default) or 'desc'")
+    parser.add_argument("--sort-by", type=str, 
+                        help="Colomne par laquelle les résultats sont triés")
+    parser.add_argument("--order", type=str, choices=["asc", "desc"],
+                        default="asc",
+                        help="Ordre du tri: 'asc' (default) or 'desc'")
 
     args = parser.parse_args()
 
@@ -151,6 +163,7 @@ def main():
         if not tests_passed:
             print("Tests failed! Please fix the issues before running the application.")
             sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

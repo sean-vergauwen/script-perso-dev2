@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from src.data_processing import consolidate_data
 
+
 class TestDataProcessing(unittest.TestCase):
     def setUp(self):
         self.df1 = pd.DataFrame({

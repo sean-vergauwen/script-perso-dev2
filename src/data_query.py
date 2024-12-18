@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def query_data(file_path, condition):
     """
     Interroge les données consolidées en fonction d'une ou plusieurs condition(s).

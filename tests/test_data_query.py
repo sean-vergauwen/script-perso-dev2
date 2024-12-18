@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from src.data_query import query_data
 
+
 class TestDataQuery(unittest.TestCase):
     def setUp(self):
         # Create a temporary test file
