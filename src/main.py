@@ -11,6 +11,9 @@ from report_generation import generate_report
 
 
 def import_files(files):
+    """
+    prend en input une liste de chemins de fichiers CSV et les consolide en un
+    """
     data = import_csv_files(files)
     if data:
         consolidate_data(data)
@@ -19,6 +22,11 @@ def import_files(files):
 
 
 def query(user_query, sort_by, order):
+    """
+    prend en input une liste de query, la catégorie par laquelle le résultat doit être trié et
+    l'ordre du tri (asc ou desc) et, si il n'y a pas d'erreur, affiche le résultat de la query en console
+    et le stocke dans le dossier outputs
+    """
     result = query_data('../outputs/consolidated_inventory.csv', user_query)
     try:
         if sort_by:
