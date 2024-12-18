@@ -1,6 +1,7 @@
 import argparse
 import sys
 import unittest
+import datetime
 from pathlib import Path
 import pandas as pd
 from data_import import import_csv_files
@@ -30,7 +31,8 @@ def query(user_query, sort_by, order):
         print(f"Erreur : {e})")
 
     print(result)
-
+    now = datetime.datetime.now()
+    result.to_csv(f"../outputs/{str(now.strftime('%m-%d-%Y_%H-%M-%S'))}_output.csv", index=False)
 
 def run_tests():
     # Get the project root directory
