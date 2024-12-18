@@ -1,0 +1,21 @@
+product_name,category,quantity,unit_price
+Hammer,Tools,30,19.99
+Screwdriver,Tools,50,9.99
+Wrench,Tools,40,14.99
+Drill,Tools,15,89.99
+Saw,Tools,20,29.99
+Pliers,Tools,35,12.99
+Tape Measure,Tools,60,7.99
+Sander,Tools,10,49.99
+Nail Gun,Tools,10,99.99
+Toolbox,Tools,25,39.99
+Level,Tools,20,19.99
+Ladder,Tools,10,59.99
+Electric Screwdriver,Tools,15,29.99
+Chisel,Tools,30,14.99
+Paint Brush,Tools,50,4.99
+Roller,Tools,40,7.99
+Glue Gun,Tools,25,12.99
+Flashlight,Tools,60,9.99
+Socket Set,Tools,20,24.99
+Safety Goggles,Tools,40,8.99

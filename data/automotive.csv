@@ -1,0 +1,21 @@
+product_name,category,quantity,unit_price
+Tire,Automotive,20,89.99
+Car Battery,Automotive,10,129.99
+Oil Filter,Automotive,50,14.99
+Air Filter,Automotive,40,19.99
+Spark Plug,Automotive,60,5.99
+Brake Pad,Automotive,30,49.99
+Car Jack,Automotive,15,79.99
+Wiper Blade,Automotive,25,9.99
+Steering Wheel Cover,Automotive,40,14.99
+Car Wash Soap,Automotive,70,6.99
+Microfiber Cloth,Automotive,100,2.99
+Tire Pump,Automotive,20,19.99
+Seat Cover,Automotive,10,59.99
+Headlight Bulb,Automotive,30,14.99
+Radiator,Automotive,5,299.99
+Engine Oil,Automotive,40,24.99
+Transmission Fluid,Automotive,30,19.99
+Brake Fluid,Automotive,50,9.99
+Coolant,Automotive,20,14.99
+Tool Kit,Automotive,15,49.99

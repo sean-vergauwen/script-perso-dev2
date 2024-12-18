@@ -1,0 +1,21 @@
+product_name,category,quantity,unit_price
+Novel,Books,80,12.99
+Dictionary,Books,30,19.99
+Cookbook,Books,25,24.99
+Children's Book,Books,60,9.99
+Biography,Books,20,15.99
+Science Book,Books,15,29.99
+History Book,Books,20,14.99
+Mystery Novel,Books,40,11.99
+Romance Novel,Books,50,9.99
+Horror Novel,Books,30,10.99
+Comic Book,Books,70,6.99
+Art Book,Books,15,39.99
+Travel Guide,Books,20,19.99
+Textbook,Books,25,49.99
+Notebook,Books,100,3.99
+Planner,Books,80,4.99
+Workbook,Books,60,7.99
+Journal,Books,90,8.99
+Manual,Books,35,24.99
+Encyclopedia,Books,10,99.99
