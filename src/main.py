@@ -53,7 +53,7 @@ def mode_shell():
         print("(1) Importer des fichiers CSV à consolider en un seul fichier CSV")
         print("(2) Faire des recherches sur les données consolidées")
         print("(3) Afficher les données consolidées")
-        print("(4) Générer un rapport par catégorie sur les données consolidées et l'afficher")
+        print("(4) Générer un rapport par catégorie sur les données consolidées")
         print("(5) Fermer le programme")
         choix = input("Faites votre choix (1..5) : ")
         print("")
