@@ -1,4 +1,6 @@
-import argparse, sys, unittest
+import argparse
+import sys
+import unittest
 from pathlib import Path
 import pandas as pd
 from src.data_import import import_csv_files
